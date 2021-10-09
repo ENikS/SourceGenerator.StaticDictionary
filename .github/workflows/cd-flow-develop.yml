@@ -36,6 +36,7 @@ jobs:
       uses: gittools/actions/gitversion/setup@v0.9.10
       with:
         versionSpec: '5.x'
+        includePrerelease: true
 
     - name: Git Version
       id:   gitversion
