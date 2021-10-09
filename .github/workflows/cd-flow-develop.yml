@@ -26,23 +26,23 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Label Fixed Issues
-      uses: gh-bot/fix-labeler@master        
+    # - name: Label Fixed Issues
+    #   uses: gh-bot/fix-labeler@master        
 
-    - name: GitTools
-      uses: GitTools/actions@v0.9.10
+    # - name: GitTools
+    #   uses: GitTools/actions@v0.9.10
 
-    # - name: Install GitVersion
-    #   uses: gittools/actions/gitversion/setup@v0.9.9
-    #   with:
-    #     versionSpec: '5.x'
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.10
+      with:
+        versionSpec: '5.x'
 
-    # - name: Git Version
-    #   id:   gitversion
-    #   uses: gittools/actions/gitversion/execute@v0.9.9
-    #   with:
-    #     useConfigFile: true
-    #     configFilePath: '.github\GitVersion.yml'
+    - name: Git Version
+      id:   gitversion
+      uses: gittools/actions/gitversion/execute@v0.9.10
+      with:
+        useConfigFile: true
+        configFilePath: '.github\GitVersion.yml'
 
     # - name: Build
     #   env:
