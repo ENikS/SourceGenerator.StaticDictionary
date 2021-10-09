@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- <TargetFramework Condition=" '$(TargetFramework)' == '' ">netcoreapp3.1</TargetFramework> -->
+    <!-- <Version Condition="'$(Version)' == '' ">5.12.0</Version> -->
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Unity.Analytics.Vsix": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)tests\\TestApp\\ConsoleApp.sln\""
+    }
+  }
+}

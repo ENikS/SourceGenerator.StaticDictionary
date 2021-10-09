@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <IsPackable>false</IsPackable>
+
+    <!-- Avoid ID conflicts with the package project. -->
+    <PackageId>*$(MSBuildProjectFile)*</PackageId>
+    <RootNamespace>Unity.Precompiler.Analytics</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\packages.props" />
+
+  <ItemGroup>
+    <None Remove="**\*.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs" DesignTime="True" AutoGen="True" DependentUpon="Resources.resx" />
+    <EmbeddedResource Update="Resources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Resources.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Analytic\Parsers\Interface\" />
+    <Folder Include="Analytic\Parsers\Unity\" />
+    <Folder Include="Analytic\Parsers\Practices\" />
+    <Folder Include="Visitors\Abstractions\" />
+    <Folder Include="Visitors\Container\" />
+    <Folder Include="Visitors\Practices\" />
+  </ItemGroup>
+
+</Project>

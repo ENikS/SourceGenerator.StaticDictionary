@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Condition="'$(TargetFramework)' == ''">
+    <TargetFrameworks>net472;netcoreapp3.1;net5.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <Import Project="..\packages.props" />
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <NoWarn>$(NoWarn);NETSDK1138</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Analytics\Unity.Precompiler.Analytics.csproj" />
+    <ProjectReference Include="..\..\src\CodeFixes\Unity.Precompiler.CodeFixes.csproj" />
+  </ItemGroup>
+
+</Project>
