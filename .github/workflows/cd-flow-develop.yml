@@ -30,6 +30,7 @@ jobs:
       uses: gh-bot/fix-labeler@master        
 
     - name: GitVersion action
+      id: gitversion
       uses: nmcc/actions-gitversion@v1
 
     # - name: Install GitVersion
