@@ -1,0 +1,63 @@
+name:  Continuous Deployment
+
+on:
+  push:
+    branches:
+      - 'develop'    
+      - 'release/**'    
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+    env:
+      PackageName: 'SourceGenerator.StaticDictionary'
+      PackageOutputPath: '${{ github.workspace }}\package'
+      TargetFramework: 'netcoreapp3.1'
+
+    steps:
+
+    # - name: Setup MSBuild
+    #   uses: microsoft/setup-msbuild@v1
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Label Fixed Issues
+      uses: gh-bot/fix-labeler@master        
+
+    - name: GitVersion action
+      uses: nmcc/actions-gitversion@v1
+
+    # - name: Install GitVersion
+    #   uses: gittools/actions/gitversion/setup@v0.9.9
+    #   with:
+    #     versionSpec: '5.x'
+
+    # - name: Git Version
+    #   id:   gitversion
+    #   uses: gittools/actions/gitversion/execute@v0.9.9
+    #   with:
+    #     useConfigFile: true
+    #     configFilePath: '.github\GitVersion.yml'
+
+    # - name: Build
+    #   env:
+    #     Version: '${{ steps.gitversion.outputs.fullSemVer }}'
+    #     Configuration: 'Release'
+    #   run: | 
+    #     msbuild -verbosity:m -restore:True ${{ github.workspace }}\${{ env.PackageName }}.sln
+  
+    # - name: Publish Local Package
+    #   run: |
+    #     dotnet nuget add source "https://nuget.pkg.github.com/unitycontainer/index.json" -n github -u unitycontainer -p ${{secrets.GITHUB_TOKEN}} --store-password-in-clear-text
+    #     dotnet nuget push '${{ env.PackageOutputPath }}\*' --source github --api-key ${{secrets.WORKFLOW_PAT}}
+
+    # - uses: actions/delete-package-versions@v1
+    #   name: Remove old packages
+    #   with:
+    #     package-name: ${{ env.PackageName }}
+    #     num-old-versions-to-delete: 1
+    #     token: ${{ secrets.WORKFLOW_PAT }}
