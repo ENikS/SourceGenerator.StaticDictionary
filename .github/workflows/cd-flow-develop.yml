@@ -29,16 +29,8 @@ jobs:
     - name: Label Fixed Issues
       uses: gh-bot/fix-labeler@master        
 
-
-    - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup
-      with:
-        versionSpec: '6.x'
-        includePrerelease: true
-
-    # - name: GitVersion action
-    #   id: gitversion
-    #   uses: nmcc/actions-gitversion@v1
+    - name: GitTools
+      uses: GitTools/actions@v0.9.10
 
     # - name: Install GitVersion
     #   uses: gittools/actions/gitversion/setup@v0.9.9
