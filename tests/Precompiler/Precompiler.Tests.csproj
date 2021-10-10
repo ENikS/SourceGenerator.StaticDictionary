@@ -15,7 +15,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Precompiler\Unity.Precompiler.csproj" />
+    <ProjectReference Include="..\..\src\Precompiler\Precompiler.csproj" />
   </ItemGroup>
 
 </Project>

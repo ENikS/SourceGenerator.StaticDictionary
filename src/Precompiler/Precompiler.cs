@@ -1,5 +1,4 @@
 ﻿using Microsoft.CodeAnalysis;
-using Unity.Precompiler.Analysis;
 
 namespace Unity.Precompiler
 {

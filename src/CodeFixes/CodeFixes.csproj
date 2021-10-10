@@ -11,7 +11,7 @@
   <Import Project="..\packages.props" />
 
   <ItemGroup>
-    <ProjectReference Include="..\Analytics\Unity.Precompiler.Analytics.csproj">
+    <ProjectReference Include="..\Analytics\Analytics.csproj">
       <PrivateAssets>all</PrivateAssets>
       <OutputItemType>Analyzer</OutputItemType>
       <GeneratePathProperty>true</GeneratePathProperty>

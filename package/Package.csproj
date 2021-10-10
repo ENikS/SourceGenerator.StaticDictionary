@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <Authors>ENikS</Authors>
-    <PackageId>Unity.Precompiler</PackageId>
+    <PackageId>SourceGenerator.StaticDictionary</PackageId>
     <PackageLicenseUrl>https://github.com/unitycontainer/precompiler/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/unitycontainer</PackageProjectUrl>
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/12849707</PackageIconUrl>
@@ -26,9 +26,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Precompiler\Unity.Precompiler.csproj" />
-    <ProjectReference Include="..\src\Analytics\Unity.Precompiler.Analytics.csproj" />
-    <ProjectReference Include="..\src\CodeFixes\Unity.Precompiler.CodeFixes.csproj" />
+    <ProjectReference Include="..\src\Precompiler\Precompiler.csproj" />
+    <ProjectReference Include="..\src\Analytics\Analytics.csproj" />
+    <ProjectReference Include="..\src\CodeFixes\CodeFixes.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,9 +37,9 @@
 
   <Target Name="_AddAnalyzersToOutput">
     <ItemGroup>
-      <TfmSpecificPackageFile Include="$(OutputPath)\Unity.Precompiler.dll" PackagePath="analyzers/dotnet/cs" />
-      <TfmSpecificPackageFile Include="$(OutputPath)\Unity.Precompiler.Analytics.dll" PackagePath="analyzers/dotnet/cs" />
-      <TfmSpecificPackageFile Include="$(OutputPath)\Unity.Precompiler.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(OutputPath)\Precompiler.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(OutputPath)\Analytics.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(OutputPath)\CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
     </ItemGroup>
   </Target>
 

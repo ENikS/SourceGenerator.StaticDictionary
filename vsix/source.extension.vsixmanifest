@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="Unity.Analytics.67b8892c-6c60-4143-97d3-a2bf80c4b1b7" Version="1.0" Language="en-US" Publisher="ENikS"/>
-    <DisplayName>Unity.Precompiler</DisplayName>
-    <Description xml:space="preserve">This is a Unity Precompiler extension for the .NET Compiler Platform ("Roslyn").</Description>
+    <DisplayName>SourceGenerator.StaticDictionary</DisplayName>
+    <Description xml:space="preserve">This is a Source Generator Precompiler extension for the .NET Compiler Platform ("Roslyn").</Description>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,)" />
@@ -12,12 +12,12 @@
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.Analyzer"     d:Source="Project" d:ProjectName="Unity.Precompiler"              Path="|Unity.Precompiler|"/>
-    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="Unity.Precompiler"              Path="|Unity.Precompiler|"/>
-    <Asset Type="Microsoft.VisualStudio.Analyzer"     d:Source="Project" d:ProjectName="Unity.Precompiler.Analytics"    Path="|Unity.Precompiler.Analytics|"/>
-    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="Unity.Precompiler.Analytics"    Path="|Unity.Precompiler.Analytics|"/>
-    <Asset Type="Microsoft.VisualStudio.Analyzer"     d:Source="Project" d:ProjectName="Unity.Precompiler.CodeFixes"    Path="|Unity.Precompiler.CodeFixes|"/>
-    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="Unity.Precompiler.CodeFixes"    Path="|Unity.Precompiler.CodeFixes|"/>
+    <Asset Type="Microsoft.VisualStudio.Analyzer"     d:Source="Project" d:ProjectName="Precompiler"  Path="|Precompiler|"/>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="Precompiler"  Path="|Precompiler|"/>
+    <Asset Type="Microsoft.VisualStudio.Analyzer"     d:Source="Project" d:ProjectName="Analytics"    Path="|Analytics|"/>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="Analytics"    Path="|Analytics|"/>
+    <Asset Type="Microsoft.VisualStudio.Analyzer"     d:Source="Project" d:ProjectName="CodeFixes"    Path="|CodeFixes|"/>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="CodeFixes"    Path="|CodeFixes|"/>
   </Assets>
   <Prerequisites>
     <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor"              Version="[15.0,)" DisplayName="Visual Studio core editor" />

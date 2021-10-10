@@ -1,8 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Operations;
 using System.Reflection;
-using Unity.Precompiler.Analysis;
 using CSharp = Microsoft.CodeAnalysis.CSharp;
 using VisualBasic = Microsoft.CodeAnalysis.VisualBasic;
 
@@ -42,9 +40,10 @@ namespace Unity.Precompiler
 
         #region Implementation
 
-        private void OnCompilationUnit(Compilation compilation) 
-            => UnityInfo = compilation.UnityAssemblyName();
-
+        private void OnCompilationUnit(Compilation compilation)
+        {
+            //UnityInfo = compilation.UnityAssemblyName();
+        }
 
         private void OnInvocationOperation(IInvocationOperation? operation)
         {

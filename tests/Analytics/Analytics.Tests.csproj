@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Analytics\Unity.Precompiler.Analytics.csproj" />
+    <ProjectReference Include="..\..\src\Analytics\Analytics.csproj" />
   </ItemGroup>
 
 </Project>

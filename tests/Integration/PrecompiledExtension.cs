@@ -21,10 +21,6 @@ namespace Unity.Precompiler.Integration.Tests
         [TestMethod]
         public void AddGeneratedExtension()
         {
-            var container = new UnityContainer()
-                .AddNewExtension<Unity.Precompiled>();
-
-            Assert.IsNotNull(container.Configure<Unity.Precompiled>());
         }
     }
 }

@@ -12,22 +12,10 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
 
-  <ItemGroup Condition="!$(TargetFramework.StartsWith('net4'))">
-    <Compile Remove="Extension\SpyExtension.v4.cs" />
-  </ItemGroup>
-
-  <ItemGroup Condition="!$(TargetFramework.StartsWith('netc')) AND !$(TargetFramework.StartsWith('net5'))">
-    <Compile Remove="Extension\SpyExtension.v5.cs" />
-  </ItemGroup>
-
-  <ItemGroup Condition="!$(TargetFramework.StartsWith('net6'))">
-    <Compile Remove="Extension\SpyExtension.v6.cs" />
-  </ItemGroup>
-
   <!-- Reference Tested Generator -->
   
   <ItemGroup> 
-    <ProjectReference Include="..\..\src\Precompiler\Unity.Precompiler.csproj">
+    <ProjectReference Include="..\..\src\Precompiler\Precompiler.csproj">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <SetTargetFramework>TargetFramework=netstandard2.0</SetTargetFramework>

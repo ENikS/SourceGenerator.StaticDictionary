@@ -14,8 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Analytics\Unity.Precompiler.Analytics.csproj" />
-    <ProjectReference Include="..\..\src\CodeFixes\Unity.Precompiler.CodeFixes.csproj" />
+    <ProjectReference Include="..\..\src\Analytics\Analytics.csproj" />
+    <ProjectReference Include="..\..\src\CodeFixes\CodeFixes.csproj" />
   </ItemGroup>
 
 </Project>

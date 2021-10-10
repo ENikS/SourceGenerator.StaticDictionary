@@ -33,9 +33,9 @@
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Precompiler\Unity.Precompiler.csproj" />
-    <ProjectReference Include="..\src\CodeFixes\Unity.Precompiler.CodeFixes.csproj" />
-    <ProjectReference Include="..\src\Analytics\Unity.Precompiler.Analytics.csproj" />
+    <ProjectReference Include="..\src\Precompiler\Precompiler.csproj" />
+    <ProjectReference Include="..\src\CodeFixes\CodeFixes.csproj" />
+    <ProjectReference Include="..\src\Analytics\Analytics.csproj" />
   </ItemGroup>
 
   <ItemGroup>

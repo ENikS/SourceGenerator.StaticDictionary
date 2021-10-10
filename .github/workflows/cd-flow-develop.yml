@@ -18,19 +18,13 @@ jobs:
 
     steps:
 
-    # - name: Setup MSBuild
-    #   uses: microsoft/setup-msbuild@v1
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
 
     - name: Checkout
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-
-    # - name: Label Fixed Issues
-    #   uses: gh-bot/fix-labeler@master        
-
-    # - name: GitTools
-    #   uses: GitTools/actions@v0.9.10
 
     - name: Install GitVersion
       uses: gittools/actions/gitversion/setup@v0.9.10
@@ -44,12 +38,12 @@ jobs:
         useConfigFile: true
         configFilePath: '.github\GitVersion.yml'
 
-    # - name: Build
-    #   env:
-    #     Version: '${{ steps.gitversion.outputs.fullSemVer }}'
-    #     Configuration: 'Release'
-    #   run: | 
-    #     msbuild -verbosity:m -restore:True ${{ github.workspace }}\${{ env.PackageName }}.sln
+    - name: Build
+      env:
+        Version: '${{ steps.gitversion.outputs.fullSemVer }}'
+        Configuration: 'Release'
+      run: | 
+        msbuild -verbosity:m -restore:True ${{ github.workspace }}\${{ env.PackageName }}.sln
   
     # - name: Publish Local Package
     #   run: |

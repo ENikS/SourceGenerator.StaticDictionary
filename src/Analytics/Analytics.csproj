@@ -22,13 +22,4 @@
     <EmbeddedResource Update="Resources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Resources.Designer.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Analytic\Parsers\Interface\" />
-    <Folder Include="Analytic\Parsers\Unity\" />
-    <Folder Include="Analytic\Parsers\Practices\" />
-    <Folder Include="Visitors\Abstractions\" />
-    <Folder Include="Visitors\Container\" />
-    <Folder Include="Visitors\Practices\" />
-  </ItemGroup>
-
 </Project>
