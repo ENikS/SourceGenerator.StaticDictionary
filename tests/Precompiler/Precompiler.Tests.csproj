@@ -15,7 +15,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Precompiler\Precompiler.csproj" />
+    <ProjectReference Include="..\..\src\Generator\Precompiler.csproj" />
   </ItemGroup>
 
 </Project>
